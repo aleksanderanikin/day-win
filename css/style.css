@@ -1,0 +1,81 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background: url(../img/деньпобеды.jpeg) no-repeat bottom right / cover;
+}
+
+.wrapper {
+    overflow: hidden;
+    font-family: 'Lobster', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+}
+
+.patterns {
+    height: 55px;
+}
+
+
+
+svg text {
+    font-family: Lora;
+    letter-spacing: 10px;
+    stroke: yellow;
+    font-size: 50px;
+    font-weight: 700;
+    stroke-width: 3;
+
+    animation: textAnimate 5s infinite alternate;
+
+}
+
+@keyframes textAnimate {
+    0% {
+        stroke-dasharray: 0 50%;
+        stroke-dashoffset: 20%;
+        fill: hsl(189, 68%, 75%)
+    }
+
+    100% {
+        stroke-dasharray: 50% 0;
+        stroke-dashoffstet: -20%;
+        fill: hsla(189, 68%, 75%, 0%)
+    }
+
+}
+
+.content {
+    background-color: rgba(110, 106, 106, 0.589);
+    display: inline-block;
+    color: rgba(217, 255, 0, 0.671);
+    padding: 50px;
+    border: thick double #ff0000;
+    border-radius: 150px 150px;
+    animation: shift 3s;
+}
+
+.poem {
+    font-size: 30px;
+}
+
+@keyframes shift {
+    0% {
+        transform: translateX(-100vw);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(0.5) rotateY(180deg);
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 100;
+    }
+}
